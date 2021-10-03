@@ -1,0 +1,14 @@
+{
+  "name": "automation_web_testcafe",
+  "version": "1.0.0",
+  "description": "Belajar Web TestCafe",
+  "main": "index.js",
+  "scripts": {
+    "test-chrome": "node_modules/.bin/testcafe 'chrome:headless' tests/"
+  },
+  "author": "Pandji Mulia Budiman",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^1.16.0"
+  }
+}
