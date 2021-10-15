@@ -4,11 +4,14 @@
   "description": "Belajar Web TestCafe",
   "main": "index.js",
   "scripts": {
-    "test-chrome": "node_modules/.bin/testcafe 'chrome:headless' tests/"
+    "test-chrome": "node_modules/.bin/testcafe 'chrome:headless' tests/ --reporter list,html:reports/ui_automation_reporter.html"
   },
   "author": "Pandji Mulia Budiman",
   "license": "ISC",
   "devDependencies": {
-    "testcafe": "^1.16.0"
+    "testcafe": "^1.16.0",
+    "cucumber": "^5.1.0",
+    "gherkin-testcafe": "^2.5.2",
+    "testcafe-reporter-html": "^1.4.6"
   }
 }

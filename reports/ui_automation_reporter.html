@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Contents/bootstrap-sortable.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/bootstrap-sortable.js"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/moment.min.js"></script>
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+
+      .thumbImg {
+        width: 100%;
+        max-width: 35px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        border-width: 1px;
+        border-color: #f1f1f1;
+        border-style: solid;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.7);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      .closeModal {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .closeModal:hover,
+      .closeModal:focus {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <span class="closeModal">&times;</span>
+      <img class="modal-content" id="modelImage">
+    </div>
+    <div class="container">
+
+      <h1 class="text-primary">TestCafe Test Summary</h1>
+      <div class="client-logo" style="padding:15px"></div>
+      <div class="bg-primary" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
+        <h3>Summary</h3><br>
+        <p class="lead">Start Time: Fri Oct 15 2021 14:05:22 GMT+0700 (Western Indonesia Time)</p>
+        <p class="lead">Browsers: Chrome 94.0.4606.81 / Windows 10</p>
+        <p class="lead">Duration: 25s</p>
+        <p class="lead">Tests Failed: 1 out of 4</p>
+        <p class="lead">Tests Skipped: 0</p>
+      </div><br>
+      <table class="table sortable" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Fixture</th>
+            <th>Test Name</th>
+            <th>Browsers</th>
+            <th>Duration</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr class="success">
+  <td>1</td>
+  <td>MyFixture</td>
+  <td>Test to tick Support for testing on remote devices</td>
+  <td>Chrome 94.0.4606.81 / Windows 10</td>
+  <td>1s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>2</td>
+  <td>MyFixture</td>
+  <td>Test to typing text into field yourname</td>
+  <td>Chrome 94.0.4606.81 / Windows 10</td>
+  <td>1s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>3</td>
+  <td>MyFixture</td>
+  <td>Test to Choose Option Value in Dropdown List</td>
+  <td>Chrome 94.0.4606.81 / Windows 10</td>
+  <td>1s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="danger">
+  <td>4</td>
+  <td>Tokopedia Test</td>
+  <td>Test to Choose Option Value in DropDown List Pulsa Tokopedia</td>
+  <td>Chrome 94.0.4606.81 / Windows 10</td>
+  <td>22s</td>
+  <td><a href="#test-4">failed</a></td>
+ </tr>
+
+        </tbody>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+      <br>
+      <h3>Error Details</h3>
+       <h4 id="test-4" style="color: red;">4. Tokopedia Test - Test to Choose Option Value in DropDown List Pulsa Tokopedia</h4>
+ <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">The specified selector does not match any element in the DOM tree.
+
+ &gt; | Selector(&#39;input[name=&quot;clientNumber&quot;]&#39;)
+
+Browser: Chrome 94.0.4606.81 / Windows 10
+
+    8 |    let elementFieldPhone = Selector(&#39;input[name=&quot;clientNumber&quot;]&#39;)
+    9 |    let elementDropDownList = Selector(&#39;button[type=&quot;button&quot;][data-unify=&quot;Select&quot;]&#39;);
+   10 |    let elementDropDownOptions = Selector(&#39;ul[role=&quot;listbox&quot;]&#39;).find(&#39;li[role=&quot;option&quot;]&#39;);
+   11 |
+   12 |    // Try to type phoneNumber
+ &gt; 13 |    await t.typeText(elementFieldPhone, &quot;08123456789&quot;);
+   14 |    
+   15 |    // Try to click DropDown Element
+   16 |    await t.click(elementDropDownList);
+   17 |
+   18 |    // Try to select DropDown Value
+
+   at &lt;anonymous&gt; (D:\Kursus\qa\automation_web_testcafe\tests\test_example_tokopedia.js:13:13)
+   at asyncGeneratorStep (D:\Kursus\qa\automation_web_testcafe\tests\test_example_tokopedia.js:1:236)
+   at _next (D:\Kursus\qa\automation_web_testcafe\tests\test_example_tokopedia.js:1:574)
+   at &lt;anonymous&gt; (D:\Kursus\qa\automation_web_testcafe\tests\test_example_tokopedia.js:1:739)
+   at &lt;anonymous&gt; (D:\Kursus\qa\automation_web_testcafe\tests\test_example_tokopedia.js:1:480)
+   at &lt;anonymous&gt; (D:\Kursus\qa\automation_web_testcafe\tests\test_example_tokopedia.js:6:5) </pre><br>
+    </div>
+    <script>
+      const modal = document.getElementById('myModal');
+      const modalImage = document.getElementById("modelImage");
+
+      Array.from(document.getElementsByClassName("thumbImg")).forEach(function(el) {
+        el.onclick = function() {
+          modal.style.display = "block";
+          modalImage.src = this.src;
+        }
+      });
+
+      document.getElementsByClassName("closeModal")[0].onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+  <br>
+</html>
